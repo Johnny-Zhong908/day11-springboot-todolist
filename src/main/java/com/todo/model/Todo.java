@@ -3,9 +3,7 @@ package com.todo.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Table
@@ -15,8 +13,14 @@ import lombok.NoArgsConstructor;
 public class Todo {
     @Id
     private int id;
+    @Setter
+    @Getter
     private String text;
+    @Setter
     private boolean done;
 
 
+    public boolean getDone() {
+        return done;
+    }
 }
